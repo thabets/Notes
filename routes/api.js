@@ -40,19 +40,6 @@ router.delete("/api/notes/:id", (req, res) => {
     JSON.stringify(newData)
   );
   res.json(req.body);
-
-  // const newData = [];
-  // for (let i = 0; i < data.length; i++) {
-  //   if (data[i].id !== chosen) {
-  //     newData.push(data[i]);
-  //   }
-  // }
 });
 
 module.exports = router;
-
-function someFunction({ name }) {}
-
-someFunction({
-  name: "Hannah",
-});
