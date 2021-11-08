@@ -32,10 +32,10 @@ Sallam Thabet
 
 Project name is `Note Taker` This application functions as a note taker, where the user is able to add a title as well as notes associated with the title. The user then can proceed to save those notes or is able to also delete any notes that appear to them from the list of notes that were previously entered. The below images will show a simple view of the application.
 
-![ScreenShot](/Readme-img/Note1.jpg)
-![ScreenShot](/Readme-img/Note2.jpg)
-![ScreenShot](/Readme-img/Note3.jpg)
-![ScreenShot](/Readme-img/Note4.jpg)
+![ScreenShot](/Readme-img/Note1.JPG)
+![ScreenShot](/Readme-img/Note2.JPG)
+![ScreenShot](/Readme-img/Note3.JPG)
+![ScreenShot](/Readme-img/Note4.JPG)
 
 ## Prerequisites
 
