@@ -14,7 +14,6 @@ router.post("/api/notes", (req, res) => {
   //write file
   fs.writeFileSync(path.join(__dirname, "../db/db.json"), JSON.stringify(data));
   res.json(req.body);
-  console.log(data);
 });
 
 router.get("/api/notes", (req, res) => {
@@ -23,12 +22,37 @@ router.get("/api/notes", (req, res) => {
   );
   res.json(data);
 });
+// delete file function
+router.delete("/api/notes/:id", (req, res) => {
+  let chosen = req.params.id;
 
-router.delete("/api/notes", (req, res) => {
+  console.log(chosen);
+
   const data = JSON.parse(
     fs.readFileSync(path.join(__dirname, "../db/db.json"), "utf8")
   );
-  req.body
+
+  const newData = data.filter(({ id }) => id !== chosen);
+  console.log(newData);
+
+  fs.writeFileSync(
+    path.join(__dirname, "../db/db.json"),
+    JSON.stringify(newData)
+  );
+  res.json(req.body);
+
+  // const newData = [];
+  // for (let i = 0; i < data.length; i++) {
+  //   if (data[i].id !== chosen) {
+  //     newData.push(data[i]);
+  //   }
+  // }
 });
 
 module.exports = router;
+
+function someFunction({ name }) {}
+
+someFunction({
+  name: "Hannah",
+});
